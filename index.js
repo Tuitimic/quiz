@@ -1,5 +1,5 @@
 //
-function quiz() {
+function finish() {
   let answer = 0;
 
   // access all the elements(answers) from question1, which is sort of like an array, check all the answers
@@ -61,7 +61,6 @@ function quiz() {
   }
 
   document.getElementById("after_submit").style.visibility = "visible";
-
   document.getElementById("number_answer").innerHTML =
     "Your score is " + answer + "/5.";
 }
