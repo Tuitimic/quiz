@@ -6,3 +6,13 @@ body {
   height: 1000px;
   background-image: linear-gradient(rgb(229, 172, 224), rgb(239, 220, 170));
 }
+h1 {
+  font-size: 50px;
+  color: brown;
+}
+p {
+  font-weight: bold;
+  font-size: larger;
+  font-family: Georgia;
+  color: rgb(57, 64, 122);
+}

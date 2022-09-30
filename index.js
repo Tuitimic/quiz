@@ -1,6 +1,55 @@
-//
+// start loading questions within a web page ..none=hide questions and block=run question
+window.onload = function () {
+  document.getElementById("start").style.display = "block";
+  document.getElementById("questionContainer1").style.display = "none";
+  document.getElementById("questionContainer2").style.display = "none";
+  document.getElementById("questionContainer3").style.display = "none";
+  document.getElementById("questionContainer4").style.display = "none";
+  document.getElementById("questionContainer5").style.display = "none";
+};
+
+function startQuiz() {
+  document.getElementById("start").style.display = "none";
+  document.getElementById("questionContainer1").style.display = "block";
+  document.getElementById("questionContainer2").style.display = "none";
+  document.getElementById("questionContainer3").style.display = "none";
+  document.getElementById("questionContainer4").style.display = "none";
+  document.getElementById("questionContainer5").style.display = "none";
+}
+
+function question2() {
+  document.getElementById("questionContainer1").style.display = "none";
+  document.getElementById("questionContainer2").style.display = "block";
+  document.getElementById("questionContainer3").style.display = "none";
+  document.getElementById("questionContainer4").style.display = "none";
+  document.getElementById("questionContainer5").style.display = "none";
+}
+function question3() {
+  document.getElementById("questionContainer1").style.display = "none";
+  document.getElementById("questionContainer2").style.display = "none";
+  document.getElementById("questionContainer3").style.display = "block";
+  document.getElementById("questionContainer4").style.display = "none";
+  document.getElementById("questionContainer5").style.display = "none";
+}
+function question4() {
+  document.getElementById("questionContainer1").style.display = "none";
+  document.getElementById("questionContainer2").style.display = "none";
+  document.getElementById("questionContainer3").style.display = "none";
+  document.getElementById("questionContainer4").style.display = "block";
+  document.getElementById("questionContainer5").style.display = "none";
+}
+function question5() {
+  document.getElementById("questionContainer1").style.display = "none";
+  document.getElementById("questionContainer2").style.display = "none";
+  document.getElementById("questionContainer3").style.display = "none";
+  document.getElementById("questionContainer4").style.display = "none";
+  document.getElementById("questionContainer5").style.display = "block";
+}
+
+// function that counts the score
+
 function finish() {
-  let answer = 0;
+  let score = 0;
 
   // access all the elements(answers) from question1, which is sort of like an array, check all the answers
 
@@ -41,73 +90,25 @@ function finish() {
   }
 
   if (q1.value == "Lucky-Goldstar") {
-    answer++;
+    score++;
   }
 
   if (q2.value == "In factories") {
-    answer++;
+    score++;
   }
 
   if (q3.value == "1971") {
-    answer++;
+    score++;
   }
 
   if (q4.value == "$4000") {
-    answer++;
+    score++;
   }
 
   if (q5.value == "Books") {
-    answer++;
+    score++;
   }
-
-  document.getElementById("after_submit").style.visibility = "visible";
-  document.getElementById("number_answer").innerHTML =
-    "Your score is " + answer + "/5.";
 }
-
-// start loading questions within a web page ..none=hide questions and block=run question
-window.onload = function () {
-  document.getElementById("start").style.display = "block";
-  document.getElementById("questionContainer1").style.display = "none";
-  document.getElementById("questionContainer2").style.display = "none";
-  document.getElementById("questionContainer3").style.display = "none";
-  document.getElementById("questionContainer4").style.display = "none";
-  document.getElementById("questionContainer5").style.display = "none";
-};
-function startQuiz() {
-  document.getElementById("start").style.display = "none";
-  document.getElementById("questionContainer1").style.display = "block";
-  document.getElementById("questionContainer2").style.display = "none";
-  document.getElementById("questionContainer3").style.display = "none";
-  document.getElementById("questionContainer4").style.display = "none";
-  document.getElementById("questionContainer5").style.display = "none";
-}
-
-function question2() {
-  document.getElementById("questionContainer1").style.display = "none";
-  document.getElementById("questionContainer2").style.display = "block";
-  document.getElementById("questionContainer3").style.display = "none";
-  document.getElementById("questionContainer4").style.display = "none";
-  document.getElementById("questionContainer5").style.display = "none";
-}
-function question3() {
-  document.getElementById("questionContainer1").style.display = "none";
-  document.getElementById("questionContainer2").style.display = "none";
-  document.getElementById("questionContainer3").style.display = "block";
-  document.getElementById("questionContainer4").style.display = "none";
-  document.getElementById("questionContainer5").style.display = "none";
-}
-function question4() {
-  document.getElementById("questionContainer1").style.display = "none";
-  document.getElementById("questionContainer2").style.display = "none";
-  document.getElementById("questionContainer3").style.display = "none";
-  document.getElementById("questionContainer4").style.display = "block";
-  document.getElementById("questionContainer5").style.display = "none";
-}
-function question5() {
-  document.getElementById("questionContainer1").style.display = "none";
-  document.getElementById("questionContainer2").style.display = "none";
-  document.getElementById("questionContainer3").style.display = "none";
-  document.getElementById("questionContainer4").style.display = "none";
-  document.getElementById("questionContainer5").style.display = "block";
-}
+document.getElementById("after_submit").style.visibility = "visible";
+document.getElementById("message with your score").innerHTML =
+  "Your score is " + score + "/5.";
