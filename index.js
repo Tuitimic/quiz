@@ -1,4 +1,5 @@
-// start loading questions within a web page ..none=hide questions and block=run question
+// start loading questions within a web page
+// first function hide all the question
 window.onload = function () {
   document.getElementById("start").style.display = "block";
   document.getElementById("questionContainer1").style.display = "none";
@@ -108,7 +109,8 @@ function finish() {
   if (q5.value == "Books") {
     score++;
   }
+
+  document.getElementById("after_submit").style.visibility = "visible";
+  document.getElementById("message with your score").innerHTML =
+    "Your score is " + score + "/5.";
 }
-document.getElementById("after_submit").style.visibility = "visible";
-document.getElementById("message with your score").innerHTML =
-  "Your score is " + score + "/5.";
