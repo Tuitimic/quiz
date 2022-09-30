@@ -1,0 +1,8 @@
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 1000px;
+  background-image: linear-gradient(rgb(229, 172, 224), rgb(239, 220, 170));
+}
